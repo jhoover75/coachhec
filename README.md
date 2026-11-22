@@ -1,17 +1,17 @@
 # coachhec.com
 
-Static one-page site for Coach Hec's pickleball lessons. No build step: `index.html` + `style.css`.
+Static one-page site for Coach Hec's pickleball lessons. No build step. The site lives in `public/` (`index.html`, `style.css`, `coach.jpg`); docs stay at the root so they are not published.
 
 ## Fill in before launch
 Search for `TODO`, `FACEBOOK-PAGE`, and `$XX`.
 
 ## Preview locally
-    python3 -m http.server 8000   # then open http://localhost:8000
+    python3 -m http.server 8000 -d public   # then open http://localhost:8000
 
 ## Deploy (Cloudflare Pages)
 1. Push this folder to a GitHub repo.
 2. Cloudflare dashboard -> Workers & Pages -> Create -> Pages -> connect the repo.
-3. Build command: none. Output directory: `/`.
+3. Build command: none. Build output directory: `public`.
 4. Add custom domain `coachhec.com` under the project's Custom domains tab.
 
 ## Calendly setup

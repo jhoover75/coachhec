@@ -45,7 +45,7 @@ Private clients who text him directly also exist.
 
 **Single source of truth: his Google Calendar.** He already uses it. Connect it to Calendly and enable conflict checking. He must add every Jimmy Moore, Dill Dinkers, and direct-booked session to it so Calendly blocks those times and nothing gets double-booked.
 
-## Page structure (index.html, top to bottom)
+## Page structure (public/index.html, top to bottom)
 1. Sticky header with nav (on screens 640px and narrower the links collapse into a ☰ menu button; a small inline script opens and closes it)
 2. Hero
 3. Lesson types: four Calendly cards, then two outbound cards for Jimmy Moore Pickleball Complex and Dill Dinkers
@@ -55,17 +55,17 @@ Private clients who text him directly also exist.
 7. Contact (Facebook)
 8. Footer
 
-Files: `index.html`, `style.css`, `README.md` (deploy steps), this file.
+Files: `public/index.html`, `public/style.css`, `public/coach.jpg` (the deployed site; Cloudflare Pages output directory is `public`), plus `README.md` (deploy steps) and this file at the root, which are not published.
 
 ## Status (2026-11-22)
 Scaffold created and not yet previewed in a browser. These placeholders still need real values (search the repo for them):
 - `FACEBOOK-PAGE`
 - `$XX`: prices for each lesson type
-- `TODO`: cancellation policy, higher-res photo (`coach.jpg` is a crop from a screenshot of his bio card)
+- `TODO`: cancellation policy, higher-res photo (`public/coach.jpg` is a crop from a screenshot of his bio card)
 
 ## Next steps
 1. Fill in the placeholders above.
-2. Preview locally with `python3 -m http.server 8000` and check mobile.
+2. Preview locally with `python3 -m http.server 8000 -d public` and check mobile.
 3. Create the three Calendly event types and connect Google Calendar.
 4. Push to GitHub, connect Cloudflare Pages, and attach `coachhec.com`.
 
